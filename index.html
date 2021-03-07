@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gov.SA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Login -->
+    <div class="sign_in" >
+      <div class="formPopup" id="Login">
+      <form  method="POST" class="formContainer" onsubmit="event.preventDefault(); login()"  >
+          <h2>Please Login</h2>
+          <input type="text" id="id_no" placeholder="Vaild SA ID number" name="id_no" required id="login_input">
+          <input type="text" id="name" placeholder="Fullname" name="fullname" required required id="login_input">
+          <input type="password" id="psw" placeholder="Your Password" name="pin" required required id="login_input">
+          <button type="submit" class="btn" onclick="check()">Log in</button>
+          <button type="button" class="btn cancel" onclick="closeForms1()">Close</button>
+          <a style="color: blue;" onclick="Register()">
+              <p>Don't have an account click here!</p>
+          </a>
+      </form>
+      </div>
+  </div>
+
+  <!-- Registration form-->
+  <div class="sign_in">
+      <div class="formPopup" id="Register">
+      <form  method="POST" class="formContainer" onsubmit="event.preventDefault(); createUsers();" id="reg-form"  >
+          <h2>Please Register</h2>
+          <input type="text" id="idno1" placeholder="South Africa ID Number" name="id" required>
+          <input type="text" id="name1" placeholder="Fullname" name="name" required>
+          <input type="text" id="surname1" placeholder="Surname" name="surname" required>
+          <input type="email" id="comtact1" placeholder="e-mail" name="email" required>
+          <input type="password" id="psw1" placeholder="Your Password" name="password" required>
+          <input type="password" placeholder="Confirm Password" name="confirm" required>
+          <button type="submit" class="btn" onclick="store()">Register</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+      </div>
+  </div>
+
+  <!--Contact form-->
+  <div class="contact">
+    <div class="conPopup" id="contact">
+    <form action="https://formspree.io/f/moqpozed" method="POST" class="formContainer" id="reg-form"  >
+        <h2>Contact Us</h2>
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="_replyto" placeholder="Contact info">
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForms()">Close</button>
+    </form>
+    </div>
+</div>
+   
+  
+  <!--End of Forms-->
+    <div class="wrapper">
+      <div class="parallax__group hero-container">
+        <div class="parallax__layer sky"></div>
+        <div class="parallax__layer people1"></div>
+        <div class="parallax__layer people2"></div>
+        <div class="parallax__layer people3"></div>
+        <div class="parallax__layer hero-text">
+          <h2>Gov.SA</h2>
+          <ul>
+            <li><a href="#" onclick="Contact()">Contact</a></li>
+            <li><a href="#">Vote</a></li>
+            <li><a href="#" class="btn" onclick="Logins()">Login</a></li>
+          </ul>
+          <div class="year-container">
+            <h1>Gov.SA</h1>
+            <P>E-VOTING</P>
+           
+            
+          </div>
+          <div class="social-container">
+            <a href="https://github.com/KiaanCastillo" target="_blank"
+              ><i class="icon ion-logo-github"></i
+            ></a>
+            <a href="https://www.instagram.com/craftedbykiaan/" target="_blank"
+              ><i class="icon ion-logo-instagram"></i
+            ></a>
+            <a href="https://dribbble.com/kiaancastillo" target="_blank"
+              ><i class="icon ion-logo-dribbble"></i
+            ></a>
+            <a href="https://www.youtube.com/c/KiaanCastillo" target="_blank"
+              ><i class="icon ion-logo-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">About Gov.SA</h1>
+        <img src="./img/lelethu-IEC-readiness-option-2-1600x898.jpg" alt="Lively and colourful concert" />
+        <div class="text-container">
+          <h2>This is your year.</h2>
+          <p>Gov.SA provides you to keep track of political states and it gives you the 
+            <b>Power</b> to vote all in the comfort within your hands.
+            NOt only does it provide you with time effecinecy but it also combats against the fight against COVID-19.
+            <br>
+            Start using Gov.SA and now
+          </p>
+          <p>- Making standing in a line the thing of the <b>PAST</b></p>
+          <a href="#" class="btn" onclick="Register()">Register to Gov.SA</a>
+        </div>
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">COVID-19 SAFTY MEASURES</h1>
+        
+        <div class="text-container" style="margin-left: 70px; width: 45%; position: absolute; top: 27%;
+        left: 6%;">
+          <h2>Health and Safty</h2>
+          <p>According to the CDC, the virus is thought to be spread mainly from person-to-person.
+            This means it may spread between people who are in close contact with one another (within about 6 feet), 
+            or through respiratory droplets when an infected person coughs or sneezes. 
+            These droplets can land in the mouths or noses of people who are nearby or 
+            possibly be inhaled into the lungs. COVID-19 may be spread by people who are not showing symptoms. 
+          </p>
+
+          <span style="color: red; text-decoration: underline"><h4>Safty Tips</h4></span>
+          <ul>
+            <li>Wash your hands often with soap and water for at least 20 seconds, 
+              especially after being in a public place, or after blowing your nose, coughing or sneezing. 
+              If soap and water are not readily available, use a hand sanitizer with at least 60% alcohol</li>
+              <br>
+            <li>Avoid touching your eyes, nose and mouth with unwashed hands</li>
+            <br>
+            <li>Avoid close contact with people who are sick, 
+              and practice social distancing by keeping at least 6 feet away from others if you must go out in public.</li>
+          </ul>
+          <p>- Practice <span style="color: red;">Social Distancing</span> <b>PAST</b></p>
+          <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html" class="btn">Click TO READ MORE</a>
+        </div>
+        <div class="bingwidget" data-type="covid19_stats_map" data-market="en-us" data-language="en-us"  data-processing="false" data-processed="true">
+          <iframe src="http://www.bing.com/covidans/widget?height=1000&amp;width=100&amp;f=C19USL&amp;m=en-us&amp;l=en-us&amp;mkt=en-us&amp;setlang=en-us&amp;FORM=C19USL&amp;mt=Stats%2BMap#url=file%3A%2F%2F%2FC%3A%2FUsers%2FShane%2FDesktop%2Fcopy%2FPure-CSS-Multilayer-Parallax%2Findex.html" height="1000px" frameborder="0" scrolling="no" allowtransparency="true" transparency="true" style="z-index:10000000000;overflow:hidden;box-sizing:border-box;background-color:transparent;width:1px;min-width:100%;" seamless="seamless" id="_bw_0" data-src="http://www.bing.com/covidans/widget?height=1000&amp;width=100&amp;f=C19USL&amp;m=en-us&amp;l=en-us&amp;mkt=en-us&amp;setlang=en-us&amp;FORM=C19USL&amp;mt=Stats%2BMap#url=file%3A%2F%2F%2FC%3A%2FUsers%2FShane%2FDesktop%2Fcopy%2FPure-CSS-Multilayer-Parallax%2Findex.html"></iframe>
+        </div>
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">VOTING ON Gov.SA</h1>
+        <video src="img/final_60439d7d27952600b2f78fed_792082.mp4" autoplay loop></video>
+        <div class="text-container" style="position: absolute;
+        left: 60%;">
+          <h2>It's so <b>Easy</b></h2>
+          <p>Gov.SA voting system is so easy to understand, it will make you believe you got the ballot.
+            All you got to do is <a  onclick="Register()"><span style="color: red;">Regitser</span></a>
+            and vote
+            <br>
+            <br>
+            <span style="color: red;">Requirements</span>
+            <ul>
+              <li>Must be a South African citizen;</li>
+              <br>
+              <li>Must be 18 or older to vote</li>
+              <br>
+              <li>have a green, bar-coded ID book; smartcard ID; or valid Temporary Identity Certificate (TIC).</li>
+            </ul>
+          </p>
+          <a href="#" class="btn" onclick="Register()">Register to Gov.SA</a>
+        </div>
+      </div>
+    
+
+    <footer>
+      <div class="footer">          
+          <div class="row" style="display: block;">
+              <ul>
+                  <li><a href="#" onclick="Contact()">Contact us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+          </div>
+          
+          <div class="row" style="display: block;">
+              Shane Morne Kolkoto Copyright © 2021 - All rights reserved || Designed By: Shane Kolkto 
+          </div>
+      </div>
+  </footer>
+  </div>
+
+    
+    
+
+    <!-----------------------------END--------------------------------->
+    <!-------------------------JAVASCRIPTS----------------------------->
+    <script src="js/main.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="http://www.bing.com/widget/bootstrap.answer.js" async=""></script>
+  </body>
+</html>

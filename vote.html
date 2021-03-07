@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gov.SA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b85936b303.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Login -->
+    <div class="sign_in" >
+      <div class="formPopup" id="Login">
+      <form  method="POST" class="formContainer" onsubmit="event.preventDefault(); login()"  >
+          <h2>Please Login</h2>
+          <input type="text" id="id_no" placeholder="Vaild SA ID number" name="id_no" required id="login_input">
+          <input type="text" id="name" placeholder="Fullname" name="fullname" required required id="login_input">
+          <input type="password" id="psw" placeholder="Your Password" name="pin" required required id="login_input">
+          <button type="submit" class="btn" onclick="login()">Log in</button>
+          <button type="button" class="btn cancel" onclick="closeForms1()">Close</button>
+          <a style="color: blue;" onclick="Register()">
+              <p>Don't have an account click here!</p>
+          </a>
+      </form>
+      </div>
+  </div>
+
+  <!-- Registration form-->
+  <div class="sign_in">
+      <div class="formPopup" id="Register">
+      <form  method="POST" class="formContainer" onsubmit="event.preventDefault(); createUsers();" id="reg-form"  >
+          <h2>Please Register</h2>
+          <input type="number" id="idno1" placeholder="South Africa ID Number" name="id" required>
+          <input type="text" id="name1" placeholder="Fullname" name="name" required>
+          <input type="text" id="surname1" placeholder="Surname" name="surname" required>
+          <input type="email" id="comtact1" placeholder="e-mail" name="email" required>
+          <input type="password" id="psw1" placeholder="Your Password" name="password" required>
+          <input type="password" id="psw1" placeholder="Confirm Password" name="confirm" required>
+          <button type="submit" class="btn" onclick="store()">Register</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+      </div>
+  </div>
+
+  <!--Contact form-->
+  <div class="contact">
+    <div class="conPopup" id="contact">
+    <form action="https://formspree.io/f/moqpozed" method="POST" class="formContainer" id="reg-form"  >
+        <h2>Contact Us</h2>
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="_replyto" placeholder="Contact info">
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForms()">Close</button>
+    </form>
+    </div>
+</div>
+   
+  
+  <!--End of Forms-->
+    <div class="wrapper">
+      <div class="parallax__group hero-container">
+        <div class="parallax__layer sky"></div>
+        <div class="parallax__layer people1"></div>
+        <div class="parallax__layer people2"></div>
+        <div class="parallax__layer people3"></div>
+        <div class="parallax__layer hero-text">
+          <h2>Gov.SA</h2>
+          <ul>
+            <li><a href="#" onclick="Contact()">Contact</a></li>
+            <li><i class="fas fa-user-cog" style="position: absolute;
+                left: 34%;"></i><a href="#">Settings</a></li>
+            <li><a href="#" class="btn" onclick="sign_out()">Log-Out</a></li>
+          </ul>
+          <div class="year-container">
+            <h1>Gov.SA</h1>
+            <P>E-VOTING</P>
+           
+            
+          </div>
+          <div class="social-container">
+            <a href="https://github.com/KiaanCastillo" target="_blank"
+              ><i class="icon ion-logo-github"></i
+            ></a>
+            <a href="https://www.instagram.com/craftedbykiaan/" target="_blank"
+              ><i class="icon ion-logo-instagram"></i
+            ></a>
+            <a href="https://dribbble.com/kiaancastillo" target="_blank"
+              ><i class="icon ion-logo-dribbble"></i
+            ></a>
+            <a href="https://www.youtube.com/c/KiaanCastillo" target="_blank"
+              ><i class="icon ion-logo-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">Voting with Gov.SA</h1>
+        <img src="./img/voting.gif" alt="Lively and colourful concert" />
+        <div class="text-container">
+          <h2>2021</h2>
+          <p>Voting with Gov.SA is the same as going into your local voting station
+            <b style="color: red;">But</b> without the hassle of standing in a long queue, and exposing yourself
+            to the dangers of Covid-19
+            <br>
+            Start using Gov.SA and now
+          </p>
+          <p>- e-voting is the way forward</p>
+          <a href="#" class="btn" onclick="Register()">Vote Now</a>
+        </div>
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">Recent States (<span style="color: red;">IEC</span>)</h1>
+        
+        <div class="text-container" style="margin-left: 70px; width: 45%; position: absolute; top: 27%;
+        left: 6%;">
+        <script type="text/javascript" src="https://polldaddy.com/survey.js" charset="UTF-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            polldaddy.add( {
+            type: 'report',
+            embed: 'poll',
+            id: 10766193
+        } );
+        </script>
+
+        
+          
+        </div>
+        <div class="proccedVote">
+          <a href="#" class="btn" >Click To Vote</a>
+        </div>
+        
+      </div>
+      <div class="parallax__group info-container">
+        <h1 class="titles">Parties</h1>
+
+        
+        
+      </div>
+    
+
+    <footer>
+      <div class="footer">          
+          <div class="row" style="display: block;">
+              <ul>
+                  <li><a href="#" onclick="Contact()">Contact us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+          </div>
+          
+          <div class="row" style="display: block;">
+              Shane Morne Kolkoto Copyright © 2021 - All rights reserved || Designed By: Shane Kolkto 
+          </div>
+      </div>
+  </footer>
+  </div>
+
+    
+    
+
+    <!-----------------------------END--------------------------------->
+    <!-------------------------JAVASCRIPTS----------------------------->
+    <script src="js/main.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
