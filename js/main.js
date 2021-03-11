@@ -22,3 +22,11 @@ function Logins() {
   }
 
 // Moudal END
+
+
+// Pre-Loader
+$(document).ready(function() {
+  $("#overlay").delay(100).fadeOut();
+  //change the delay to lower number like 500
+});
+

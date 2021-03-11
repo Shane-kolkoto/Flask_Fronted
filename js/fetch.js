@@ -30,7 +30,7 @@ function createUsers(){
 // -------------- LOGIN DATA ----------- //
 let Users = [];
 
-fetch("https://webappgov.herokuapp.com//show-users/")
+fetch("https://webappgov.herokuapp.com/show-users/")
     .then((response) =>response.json())
     .then((data) => {
     console.log(data);
@@ -62,6 +62,7 @@ function login(){
 
 function sign_out() {
     alert("You have successfully Logged Out");
+    window.localStorage.removeItem("current_userlogged");
     window.location.href = "index.html";
   }
 
@@ -95,9 +96,9 @@ function check() {
 
     // check if stored data from register-form is equal to data from login form
     if(userID.value == storedID && userName == storedName && userPw.value == storedPw) {
-        alert('You are loged in.');
+        alert('Error already hav an account');
     }else {
-        alert('ERROR.');
+        alert('You Logged in.');
     }
 }
 
